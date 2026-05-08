@@ -1,38 +1,81 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-.kotlin
+# =========================
+# Rust
+# =========================
+/target
+**/*.rs.bk
 
-### IntelliJ IDEA ###
-.idea
-.target
-*.iws
-*.iml
-*.ipr
+
+# =========================
+# Node.js / Frontend
+# =========================
+node_modules
+dist
+dist-ssr
+.vite
+*.local
+
+# Package managers
+.pnpm-store
+.npm
+.yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# =========================
+# Tauri
+# =========================
+src-tauri/target
+src-tauri/gen
+
+# Tauri updater artifacts
+*.msi
+*.msix
+*.app
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+
+# =========================
+# Environment files
+# =========================
 .env
+.env.*
+!.env.example
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# =========================
+# IDE
+# =========================
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# =========================
+# OS files
+# =========================
 .DS_Store
+Thumbs.db
+
+# =========================
+# Temporary files
+# =========================
+tmp
+temp
+*.tmp
