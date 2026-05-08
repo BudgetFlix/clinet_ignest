@@ -80,7 +80,7 @@ export default function UploadForm() {
             </button>
 
             {/* DEBUG */}
-            <pre className="text-xs p-2 rounded">
+            <pre className="text-xs p-2">
                 {JSON.stringify(form, null, 2)}
             </pre>
         </div>

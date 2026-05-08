@@ -1,14 +1,23 @@
-import "./MovieForm";
-import UploadForm from "./MovieForm";
-
+import "./pages/MovieForm";
+import UploadForm from "./pages/MovieForm";
+import Layout from "./layout/layout";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom"
 
 function App() {
 
 
   return (
-    <main>
-      <UploadForm></UploadForm>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<UploadForm />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
