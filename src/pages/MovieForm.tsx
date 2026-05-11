@@ -3,6 +3,8 @@ import { invoke } from "@tauri-apps/api/core";
 
 
 
+
+
 export default function UploadForm() {
     const [form, setForm] = useState({
         filePath: "",
@@ -28,61 +30,36 @@ export default function UploadForm() {
     }
 
     return (
-        <div className="p-6 max-w-xl mx-auto space-y-4">
+        <div className="flex justify-center items-center w-full h-full"> 
 
-            {/* FILE PATH */}
-            <input
-                type="text"
-                placeholder="Fájl elérési út (pl. C:\\video.mp4)"
-                value={form.filePath}
-                onChange={(e) =>
-                    setForm({ ...form, filePath: e.target.value })
-                }
-                className="w-full p-2 rounded bg-gray-800 text-white"
-            />
+            <div className=" p-6 max-w-xl mx-auto space-y-4">
 
-            {/* FILE NAME */}
-            <input
-                type="text"
-                placeholder="Mentési név"
-                value={form.fileName}
-                onChange={(e) =>
-                    setForm({ ...form, fileName: e.target.value })
-                }
-                className="w-full p-2 rounded bg-gray-800 text-white"
-            />
+                <form className="grid-cols-1 gap-3" >
+                    <label className="text-3xl mb-3"> Videó  eleresi utja </label>
+                   <input className="h-9 w-xl border-white rounded-md bg-foreground/10 text-base" placeholder="pl.: C:" />
 
-            {/* TYPE */}
-            <select
-                value={form.type}
-                onChange={(e) =>
-                    setForm({ ...form, type: e.target.value as "movie" })
-                }
-                className="w-full p-2 rounded bg-gray-800 text-white"
-            >
-                <option value="movie">Film</option>
-            </select>
+                </form>
 
-            <input
-                type="password"
-                placeholder="SFTP jelszó"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-2 rounded bg-gray-800 text-white"
-            />
+                
+
+                {/* FILE PATH */}
+
+                {/* FILE NAME */}
 
 
-            <button
-                onClick={handleUpload}
-                className="bg-blue-500 px-4 py-2 rounded text-white"
-            >
-                Upload
-            </button>
+                {/* TYPE */}
 
-            {/* DEBUG */}
-            <pre className="text-xs p-2">
-                {JSON.stringify(form, null, 2)}
-            </pre>
+
+
+
+
+
+
+                {/* DEBUG */}
+                <pre className="text-xs p-2">
+                    {JSON.stringify(form, null, 2)}
+                </pre>
+            </div>
         </div>
     );
 }
