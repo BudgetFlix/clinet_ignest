@@ -5,9 +5,9 @@ import { ReactNode } from "react";
 
 function SideBar({ children }: { children: ReactNode }) {
   return (
-    <div className="drawer lg:drawer-open">
+    <div className="drawer lg:drawer-open h-screen overflow-hidden">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content">
+      <div className="drawer-content overflow-y-auto">
         {/* Navbar */}
         <nav className="navbar w-full bg-base-300">
           <label htmlFor="my-drawer-4" aria-label="open sidebar" className="btn btn-square btn-ghost">
@@ -19,7 +19,7 @@ function SideBar({ children }: { children: ReactNode }) {
         {children}
       </div>
 
-      <div className="drawer-side is-drawer-close:overflow-visible fix">
+      <div className="drawer-side is-drawer-close:overflow-visible ">
         <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
         <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
           {/* Sidebar content here */}
