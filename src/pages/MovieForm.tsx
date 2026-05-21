@@ -18,7 +18,7 @@ export default function UploadForm() {
         try {
             await invoke("upload_sftp_job", {
                 filePath: form.filePath,
-                name: form.fileName,
+                title: form.fileName,
                 videoType: form.type,
                 password: password,
             });
