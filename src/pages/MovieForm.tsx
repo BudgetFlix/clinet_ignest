@@ -67,7 +67,7 @@ export default function UploadForm() {
 
                     {/* PASSWORD */}
                     <label className="label text-xl">Jelszó</label>
-                    <input type="text" placeholder="ne adjak otletet" className="input input-lg w-full"
+                    <input type="password" placeholder="ne adjak otletet" className="input input-lg w-full"
                         value={password}
                         onChange={(e) =>
                             setPassword(e.target.value)}
