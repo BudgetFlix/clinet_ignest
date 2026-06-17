@@ -46,7 +46,7 @@ pub async fn upload_sftp_job(
     sess.handshake()
         .map_err(|e| e.to_string())?;
 
-    sess.userauth_password("deploy", &password)
+    sess.userauth_password("budgetflix", &password)
         .map_err(|e| e.to_string())?;
 
     // =========================
